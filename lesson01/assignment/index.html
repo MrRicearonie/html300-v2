@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 1 - Part 2 Example</title>
+  <title>Assignment 1</title>
   <script src="scripts.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,12 +12,40 @@
 <body>
   <main>
     <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
+    <form id="form-1">
+      <label>Enter numbers separated by spaces:
         <input type="text" class="input">
       </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
+      <input type="submit" value="Let's square them!">
+      <p class="output"><br/></p>
+    </form>
+    <p><br/><br/></p>
+    <form id="form-2">
+      <label>I have an array of 5 numbers between 0 and 50, can you guess one of them? Enter guess:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" value="Is this in it?">
+      <p class="output"><br/></p>
+    </form>
+    <p><br/><br/></p>
+    <form id="form-3">
+      <label>Let's make an array for the next form. Enter how long you want the array:
+        <input type="text" class="input-long">
+      </label>
+      <br>
+      <label>What numbers would you like the array to be filled with:
+        <input type="text" class="input-fill">
+      </label>
+      <input type="submit" class="submit" value="Create Array!">
+      <p class="output"><br/></p>
+    </form>
+    <p><br/><br/></p>
+    <form id="form-4" class="hidden">
+      <label>Enter a random number to see a surprise:
+        <input type="text" class="input">
+      </label>
+      <input type="submit" class="submit" value="Surprise Me!">
+      <p class="output"><br/></p>
     </form>
   </main>
 </body>
