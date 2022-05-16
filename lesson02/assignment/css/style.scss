@@ -4,3 +4,53 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+// Get the background of the card sorted out
+.card-outline {
+    color: $text;
+    background-color: $dark-gray;
+    padding: 3rem;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: $white;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+// Styling for the name, photo, and job title
+h1 {
+    margin-bottom: 0;
+}
+
+.name-section {
+    text-align: center;
+    width: 15rem;
+    img {
+        width: 100%;
+        border-radius: 100%;
+    }
+    p {
+        font-style: italic;
+        font-size: 1.4rem;
+        margin-top: 0;
+    }
+}
+
+// Styling for the info section
+.info-section {
+    background-color: $gray;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.linkedin {
+    display: flex;
+    p{
+        margin-left: 0.5rem;
+    }
+}
