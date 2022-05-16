@@ -419,7 +419,7 @@ h1 {
 .card-outline {
   color: #717171;
   background-color: #d3d3d3;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 5px;
 }
 
@@ -428,8 +428,8 @@ h1 {
   padding: 3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 22rem 1fr;
-      grid-template-columns: 22rem 1fr;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
 }
 
 h1 {
@@ -439,7 +439,8 @@ h1 {
 
 .name-section {
   text-align: center;
-  width: 19rem;
+  max-width: 19rem;
+  margin-right: 3rem;
 }
 
 .name-section img {
@@ -453,9 +454,14 @@ h1 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #717171;
+}
+
 .info-section {
   background-color: #f6f5f6;
-  padding: 1rem 3rem;
+  padding: 1rem 0.5rem 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,5 +496,49 @@ strong {
 
 .linkedin img {
   width: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .card-outline {
+    padding: 1.5rem;
+  }
+  .card {
+    padding: 0.75rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .name-section {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    max-width: 100%;
+  }
+  /* To make the info content fit on phone screens, make the padding on the
+        sides smaller, then give space above the card to match the distance
+        between the image and name of the person */
+  .info-section {
+    padding: 0.5rem 0.1rem 1rem 0.1rem;
+    margin-top: 1.68rem;
+  }
+  .info-section p {
+    padding: 1rem 0;
+    margin-left: 0.5rem;
+  }
+  /* To make the content fit the screen of an iPhone SE/mini, make the
+    LinkedIn logo above the link, and make it smaller to fit the font size */
+  .linkedin {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0.5rem;
+  }
+  .linkedin p {
+    margin-left: 0;
+    padding-top: 0.25rem;
+  }
+  .linkedin img {
+    width: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
