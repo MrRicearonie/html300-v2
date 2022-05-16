@@ -396,26 +396,6 @@ th {
   padding: 0;
 }
 
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-.main {
-  padding: 2rem;
-}
-
-h1 {
-  color: #717171;
-}
-
 .card-outline {
   color: #717171;
   background-color: #d3d3d3;
