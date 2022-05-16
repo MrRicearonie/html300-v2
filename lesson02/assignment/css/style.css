@@ -419,7 +419,7 @@ h1 {
 .card-outline {
   color: #717171;
   background-color: #d3d3d3;
-  padding: 3rem;
+  padding: 4rem;
   border-radius: 5px;
 }
 
@@ -428,17 +428,18 @@ h1 {
   padding: 3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  -ms-grid-columns: 22rem 1fr;
+      grid-template-columns: 22rem 1fr;
 }
 
 h1 {
   margin-bottom: 0;
+  font-size: 2.5rem;
 }
 
 .name-section {
   text-align: center;
-  width: 15rem;
+  width: 19rem;
 }
 
 .name-section img {
@@ -448,13 +449,13 @@ h1 {
 
 .name-section p {
   font-style: italic;
-  font-size: 1.4rem;
-  margin-top: 0;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 .info-section {
   background-color: #f6f5f6;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,13 +468,27 @@ h1 {
           justify-content: space-evenly;
 }
 
+.info-section p {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+strong {
+  font-size: 1.5rem;
+}
+
 .linkedin {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 0.75rem;
 }
 
 .linkedin p {
-  margin-left: 0.5rem;
+  margin: auto 0.5rem;
+}
+
+.linkedin img {
+  width: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
