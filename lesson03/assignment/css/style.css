@@ -489,9 +489,12 @@ a {
   font-style: italic;
 }
 
+.info-section .languages strong {
+  font-style: normal;
+}
+
 strong {
   font-size: 1.5rem;
-  font-style: normal;
 }
 
 .linkedin {

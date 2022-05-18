@@ -64,15 +64,18 @@ a {
         font-size: 1.25rem;
         margin: 0;
     }
+    // Make the languages known italic, but not the label
     .languages {
         font-style: italic;
+        strong {
+            font-style: normal;
+        }
     }
 }
 
 // Make the labels larger
 strong {
     font-size: 1.5rem;
-    font-style: normal;
 }
 
 .linkedin {
