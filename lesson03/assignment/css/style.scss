@@ -59,11 +59,15 @@ a {
         font-size: 1.25rem;
         margin: 0;
     }
+    .languages {
+        font-style: italic;
+    }
 }
 
 // Make the labels larger
 strong {
     font-size: 1.5rem;
+    font-style: normal;
 }
 
 .linkedin {
@@ -116,6 +120,7 @@ strong {
     .linkedin {
         flex-direction: column;
         margin-left: 0.5rem;
+        height: auto;
         p {
             margin-left: 0;
             padding-top: 0.25rem;

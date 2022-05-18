@@ -481,8 +481,13 @@ a {
   margin: 0;
 }
 
+.info-section .languages {
+  font-style: italic;
+}
+
 strong {
   font-size: 1.5rem;
+  font-style: normal;
 }
 
 .linkedin {
@@ -535,6 +540,7 @@ strong {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-left: 0.5rem;
+    height: auto;
   }
   .linkedin p {
     margin-left: 0;
