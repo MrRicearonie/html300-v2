@@ -6,7 +6,7 @@
 
 // Make the title more consistant with the card placement
 h1 {
-    margin-left: 1rem;
+    margin-left: $margin;
 }
 
 // Get the nice border of the card set up
@@ -14,7 +14,7 @@ h1 {
     color: $text;
     background-color: $dark-gray;
     padding: $pad;
-    margin: 1rem;
+    margin: $margin;
     border-radius: 5px;
 }
 
