@@ -37,4 +37,3 @@ fetch('./data/data.json')
             container.append(card)
         });
     })
-

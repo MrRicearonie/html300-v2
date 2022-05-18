@@ -416,6 +416,10 @@ h1 {
   color: #717171;
 }
 
+h1 {
+  margin-left: 1rem;
+}
+
 .card-outline {
   color: #717171;
   background-color: #d3d3d3;
