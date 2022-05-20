@@ -1,0 +1,124 @@
+@import 'settings.variables';
+@import 'content.cards';
+
+// import font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Create the container for the cards to go into that is on the bottom. Center
+    the cards */
+.container {
+    height: 14rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow-y: hidden;
+}
+
+// Set up the cards based on what color they correlate to
+#card1 {
+    @include cards ($color1);
+}
+
+#card2 {
+    @include cards ($color2);
+}
+
+#card3 {
+    @include cards ($color3);
+}
+
+#card4 {
+    @include cards ($color4);
+}
+
+#card5 {
+    @include cards ($color5);
+}
+
+// Show the whole card if hovered, if not just show the color
+.card:hover {
+    transform: translateY(1rem);
+    box-shadow: 0 0 5px gray;
+}
+
+.down {
+    transform: translateY(10rem);
+}
+
+// Animate a button when it is clicked
+@keyframes click-ani-top {
+    30% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(90%);
+    }
+}
+
+@keyframes unclicked-ani-top {
+    0% {
+        transform: scale(90%);        
+    }
+    70% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes click-ani-bottom {
+    20% {
+        transform: scale(105%);
+    }
+    100% {
+        transform: scale(105%);
+    }
+}
+
+@keyframes unclicked-ani-bottom {
+    0% {
+        transform: scale(105%);
+    }
+    50% {
+        transform: scale(105%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+/* Turns out that this part cannot be placed in the mixin or the active
+    animation won't work, strange */
+.button-top {
+    animation: unclicked-ani-top 400ms forwards;
+}
+
+.button-top:active {
+    animation: click-ani-top 400ms forwards;
+}
+
+.button-bottom {
+    animation: unclicked-ani-bottom 400ms forwards;
+}
+
+.button-bottom:active {
+    animation: click-ani-bottom 400ms forwards;
+}
+
+/* Button animation inspiration:
+    https://www.w3schools.com/howto/howto_css_animate_buttons.asp, but it is
+    obviously completely different now. The main inspiration that I got out of
+    this is having a button that changes when clicked without using JS, but
+    it also inspired me to add a different colored background when clicked to
+    show some depth. Since I wanted an animation that scaled up then down, I
+    had to switch over to using keyframes. */
