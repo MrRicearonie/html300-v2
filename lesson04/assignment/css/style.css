@@ -1,3 +1,11 @@
+/* Button animation inspiration:
+    https://www.w3schools.com/howto/howto_css_animate_buttons.asp, but it is
+    obviously completely different now. The main inspiration that I got out of
+    this is having a button that changes when clicked without using JS, but
+    it also inspired me to add a different colored background when clicked to
+    show some depth. Since I wanted an animation that scaled up then down, I
+    had to switch over to using keyframes. */
+/* Set up the cards based on the color provided */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap");
 body {
   font-family: 'Noto Sans', sans-serif;
@@ -33,6 +41,13 @@ body {
   border-top-right-radius: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
 }
 
 #card1 p {
@@ -112,6 +127,13 @@ body {
   border-top-right-radius: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
 }
 
 #card2 p {
@@ -191,6 +213,13 @@ body {
   border-top-right-radius: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
 }
 
 #card3 p {
@@ -270,6 +299,13 @@ body {
   border-top-right-radius: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
 }
 
 #card4 p {
@@ -349,6 +385,13 @@ body {
   border-top-right-radius: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
 }
 
 #card5 p {
@@ -428,8 +471,8 @@ body {
 }
 
 .down {
-  -webkit-transform: translateY(10rem);
-          transform: translateY(10rem);
+  -webkit-transform: translateY(11rem);
+          transform: translateY(11rem);
 }
 
 @-webkit-keyframes click-ani-top {
@@ -557,12 +600,4 @@ body {
   -webkit-animation: click-ani-bottom 400ms forwards;
           animation: click-ani-bottom 400ms forwards;
 }
-
-/* Button animation inspiration:
-    https://www.w3schools.com/howto/howto_css_animate_buttons.asp, but it is
-    obviously completely different now. The main inspiration that I got out of
-    this is having a button that changes when clicked without using JS, but
-    it also inspired me to add a different colored background when clicked to
-    show some depth. Since I wanted an animation that scaled up then down, I
-    had to switch over to using keyframes. */
 /*# sourceMappingURL=style.css.map */
