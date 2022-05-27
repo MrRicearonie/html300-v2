@@ -4,3 +4,137 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Make the title more consistant with the card placement
+h1 {
+    margin-left: $margin;
+}
+
+// Get the nice border of the card set up
+.card-outline {
+    color: $text;
+    background-color: $dark-gray;
+    padding: $pad;
+    margin: $margin;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: $white;
+    padding: $pad;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+// Styling for the name, photo, and job title
+// h2 is the name
+h1,
+h2 {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.name-section {
+    text-align: center;
+    max-width: 19rem;
+    margin-right: 3rem;
+    img {
+        width: 100%;
+        border-radius: 100%;
+    }
+    p {
+        font-style: italic;
+        font-size: 1.8rem;
+        margin: 0;
+    }
+}
+
+// Styling for the info section
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+.info-section {
+    background-color: $gray;
+    padding: 1rem 0.5rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    p {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+    // Make the languages known italic, but not the label
+    .languages {
+        font-style: italic;
+        strong {
+            font-style: normal;
+        }
+    }
+}
+
+// Make the labels larger
+strong {
+    font-size: 1.5rem;
+}
+
+.linkedin {
+    display: flex;
+    margin-top: 0.75rem;
+    height: 3rem;
+    p{
+        margin: auto 0.5rem;
+    }
+    img {
+        max-width: 3rem;
+    }
+}
+
+// Change the layout if on a small device
+@include media-query("mobile") {
+    // Make the border thinner for more room
+    .card-outline {
+        padding: 1.5rem;
+    }
+
+    // Make the grid vertical instead of horizontal 
+    .card {
+        padding: 0.75rem;
+        grid-template-columns: 1fr;
+    }
+
+    // Make the name section take up the whole width
+    .name-section {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    /* To make the info content fit on phone screens, make the padding on the
+        sides smaller, then give space above the card to match the distance
+        between the image and name of the person */
+    .info-section {
+        padding: 0.5rem 0.1rem 1rem 0.1rem;
+        margin-top: 1.68rem;
+        p {
+            padding: 1rem 0;
+            margin-left: 0.5rem;
+        }
+    }
+
+    /* To make the content fit the screen of an iPhone SE/mini, make the
+    LinkedIn logo above the link, and make it smaller to fit the font size */
+    .linkedin {
+        flex-direction: column;
+        margin-left: 0.5rem;
+        height: auto;
+        p {
+            margin-left: 0;
+            padding-top: 0.25rem;
+        }
+        img {
+            width: 2rem;
+        }
+    }
+}
