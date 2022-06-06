@@ -4,3 +4,50 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
+}
+
+header {
+    grid-column: 1 / span 4;
+    margin-bottom: 1rem;
+}
+
+.flex {
+    padding: 0 1.5rem;
+    max-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav {
+    grid-column: 1 / span 4;
+    &__list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+    &__item {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+    &__link {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+}
+
+footer {
+    grid-column: 1 / span 4;
+}
