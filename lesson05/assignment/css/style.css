@@ -4,6 +4,8 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -409,24 +411,647 @@ html {
 }
 
 .main {
-  padding: 2rem;
+  padding: 0;
+}
+
+/* Button animation inspiration:
+    https://www.w3schools.com/howto/howto_css_animate_buttons.asp, but it is
+    obviously completely different now. The main inspiration that I got out of
+    this is having a button that changes when clicked without using JS, but
+    it also inspired me to add a different colored background when clicked to
+    show some depth. Since I wanted an animation that scaled up then down, I
+    had to switch over to using keyframes.
+    
+    For the cards coming up I didn't look for inspiration. When I came up with
+    the concept for this project, I already knew I wanted the cards to pop up
+    from the bottom of the screen. */
+/* Set up the cards based on the color provided */
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Create the container for the cards to go into that is on the bottom. Center
+        the cards */
+.card-container {
+  height: 14rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+}
+
+#card1 {
+  height: 13rem;
+  width: 10rem;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card 
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
+}
+
+#card1 p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#card1 .color {
+  height: 4rem;
+  width: 100%;
+  background-color: #11323b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#card1 .card-content {
+  height: 100%;
+  margin-top: 0;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card1 .button-top {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #2e9394;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#card1 .button-bottom {
+  width: 75%;
+  height: 2rem;
+  background-color: #11323b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5% 0;
+  border-radius: 16px;
+}
+
+#card2 {
+  height: 13rem;
+  width: 10rem;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card 
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
+}
+
+#card2 p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#card2 .color {
+  height: 4rem;
+  width: 100%;
+  background-color: #266363;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#card2 .card-content {
+  height: 100%;
+  margin-top: 0;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card2 .button-top {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #2e9394;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#card2 .button-bottom {
+  width: 75%;
+  height: 2rem;
+  background-color: #266363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5% 0;
+  border-radius: 16px;
+}
+
+#card3 {
+  height: 13rem;
+  width: 10rem;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card 
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
+}
+
+#card3 p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#card3 .color {
+  height: 4rem;
+  width: 100%;
+  background-color: #444543;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#card3 .card-content {
+  height: 100%;
+  margin-top: 0;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card3 .button-top {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #2e9394;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#card3 .button-bottom {
+  width: 75%;
+  height: 2rem;
+  background-color: #444543;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5% 0;
+  border-radius: 16px;
+}
+
+#card4 {
+  height: 13rem;
+  width: 10rem;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card 
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
+}
+
+#card4 p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#card4 .color {
+  height: 4rem;
+  width: 100%;
+  background-color: #d1b47c;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#card4 .card-content {
+  height: 100%;
+  margin-top: 0;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card4 .button-top {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #2e9394;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#card4 .button-bottom {
+  width: 75%;
+  height: 2rem;
+  background-color: #d1b47c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5% 0;
+  border-radius: 16px;
+}
+
+#card5 {
+  height: 13rem;
+  width: 10rem;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  /* Color is the top part of the card that will be visible when the card 
+        is down. We want this to be the color provided */
+  /* This is the top part of the button. This is what the user will see
+        before the user clicks in */
+  /* This is the bottom part of the button. When the user clicks in the
+        button, this will show behind the top part. It will be colored the same
+        as the color on top */
+}
+
+#card5 p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#card5 .color {
+  height: 4rem;
+  width: 100%;
+  background-color: #dfd8b3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#card5 .card-content {
+  height: 100%;
+  margin-top: 0;
+  border-left: 2px solid whitesmoke;
+  border-right: 2px solid whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#card5 .button-top {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #2e9394;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#card5 .button-bottom {
+  width: 75%;
+  height: 2rem;
+  background-color: #dfd8b3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5% 0;
+  border-radius: 16px;
+}
+
+.card:hover {
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  -webkit-box-shadow: 0 0 5px gray;
+          box-shadow: 0 0 5px gray;
+}
+
+.down {
+  -webkit-transform: translateY(11rem);
+          transform: translateY(11rem);
+}
+
+@-webkit-keyframes click-ani-top {
+  30% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(90%);
+            transform: scale(90%);
+  }
+}
+
+@keyframes click-ani-top {
+  30% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(90%);
+            transform: scale(90%);
+  }
+}
+
+@-webkit-keyframes unclicked-ani-top {
+  0% {
+    -webkit-transform: scale(90%);
+            transform: scale(90%);
+  }
+  70% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@keyframes unclicked-ani-top {
+  0% {
+    -webkit-transform: scale(90%);
+            transform: scale(90%);
+  }
+  70% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@-webkit-keyframes click-ani-bottom {
+  20% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+  100% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+}
+
+@keyframes click-ani-bottom {
+  20% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+  100% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+}
+
+@-webkit-keyframes unclicked-ani-bottom {
+  0% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+  50% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@keyframes unclicked-ani-bottom {
+  0% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+  50% {
+    -webkit-transform: scale(105%);
+            transform: scale(105%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+/* Turns out that this part cannot be placed in the mixin or the active
+        animation won't work, strange */
+.button-top {
+  -webkit-animation: unclicked-ani-top 400ms forwards;
+          animation: unclicked-ani-top 400ms forwards;
+}
+
+.button-top:active {
+  -webkit-animation: click-ani-top 400ms forwards;
+          animation: click-ani-top 400ms forwards;
+}
+
+.button-bottom {
+  -webkit-animation: unclicked-ani-bottom 400ms forwards;
+          animation: unclicked-ani-bottom 400ms forwards;
+}
+
+.button-bottom:active {
+  -webkit-animation: click-ani-bottom 400ms forwards;
+          animation: click-ani-bottom 400ms forwards;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #11323b;
 }
 
 .container {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: auto 1fr 1fr 1fr;
-      grid-template-rows: auto 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: auto auto 1fr 1fr;
+      grid-template-rows: auto auto 1fr 1fr;
 }
 
 header {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / span 4;
-  margin-bottom: 1rem;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / span 5;
+  padding-bottom: 1rem;
+  background-color: #11323b;
+  padding: 1.5rem;
+  color: whitesmoke;
 }
 
 .flex {
@@ -443,8 +1068,12 @@ header {
 
 .nav {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / span 4;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / span 5;
+  background-color: #266363;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .nav__list {
@@ -466,21 +1095,136 @@ header {
 }
 
 .nav__item {
-  height: 100%;
-  width: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #348888;
   text-align: center;
   display: inline-block;
+}
+
+.nav__item:hover {
+  scale: 115%;
+  background-color: #4ebbbb;
 }
 
 .nav__link {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  color: #1e1e1e;
+}
+
+.sidebar {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  color: whitesmoke;
+  background-color: #444543;
+  min-height: 100vh;
+  padding-left: 15%;
+  color: #dfd8b3;
+}
+
+.sidebar h2 {
+  color: #d1b47c;
+}
+
+.content {
+  background-color: #dfd8b3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / span 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content h2 {
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.content h3 {
+  margin-top: 0.5rem;
+  color: #266363;
+}
+
+.content__block {
+  width: 70%;
+  margin: 2.5% 0;
+  padding: 3rem;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.content__block h4 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.content__color1 {
+  color: #1e1e1e;
+  background-color: #d1b47c;
+}
+
+.content__color1 h4 {
+  color: #11323b;
+}
+
+.content__color2 {
+  color: whitesmoke;
+  background-color: #444543;
+}
+
+.content__color2 h4 {
+  color: #d1b47c;
+}
+
+.content__color3 {
+  color: whitesmoke;
+  background-color: #11323b;
+}
+
+.content__color3 h4 {
+  color: #444543;
+}
+
+.content__color4 {
+  color: whitesmoke;
+  background-color: #266363;
+}
+
+.content__color4 h4 {
+  color: #dfd8b3;
+}
+
+.content__color5 {
+  color: #1e1e1e;
+}
+
+.content__color5 h4 {
+  color: #11323b;
 }
 
 footer {
+  height: 10rem;
+  padding-top: 2rem;
+  background-color: #11323b;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / span 4;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / span 5;
+  color: whitesmoke;
+  text-align: center;
+}
+
+footer h5 {
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
