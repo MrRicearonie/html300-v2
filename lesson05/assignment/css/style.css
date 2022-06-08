@@ -1031,8 +1031,8 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: auto auto 1fr 1fr;
-      grid-template-rows: auto auto 1fr 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
 }
 
 header {
