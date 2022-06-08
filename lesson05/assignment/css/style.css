@@ -414,17 +414,8 @@ html {
   padding: 0;
 }
 
-/* Button animation inspiration:
-    https://www.w3schools.com/howto/howto_css_animate_buttons.asp, but it is
-    obviously completely different now. The main inspiration that I got out of
-    this is having a button that changes when clicked without using JS, but
-    it also inspired me to add a different colored background when clicked to
-    show some depth. Since I wanted an animation that scaled up then down, I
-    had to switch over to using keyframes.
-    
-    For the cards coming up I didn't look for inspiration. When I came up with
-    the concept for this project, I already knew I wanted the cards to pop up
-    from the bottom of the screen. */
+/* This is the scss for the container of the cards, the cards' animation, and
+    to get the cards setup process started */
 /* Set up the cards based on the color provided */
 body {
   font-family: 'Noto Sans', sans-serif;
@@ -1144,6 +1135,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* There are multiple text box variations in the site that just change
+        colors, so create multiple styles */
 }
 
 .content h2 {
@@ -1213,6 +1206,8 @@ header {
   color: #11323b;
 }
 
+/* Make the footer take up the whole last row, make it high enough so you can
+    see the infor above the cards */
 footer {
   height: 10rem;
   padding-top: 2rem;

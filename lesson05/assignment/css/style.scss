@@ -5,8 +5,10 @@
 @import 'components.content';
 @import 'cards.content';
 
+// import my favorite font to use, Noto Sans
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap');
 
+// Set up the body to take up the entire screen so header and footer look good
 body {
     margin: 0px;
     padding: 0px;
@@ -16,6 +18,7 @@ body {
     background-color: $color1;
 }
 
+// Set up the container that comprises of the grid
 .container {
     height: 100vh;
     display: grid;
@@ -23,6 +26,7 @@ body {
     grid-template-rows: auto auto 1fr 1fr;
 }
 
+// Make the header take up the whole first row
 header {
     grid-column: 1 / span 5;
     padding-bottom: 1rem;
@@ -39,6 +43,7 @@ header {
     gap: 1rem;
 }
 
+// Set up how the nav bar looks and functions
 .nav {
     grid-column: 1 / span 5;
     background-color: $color2;
@@ -71,6 +76,7 @@ header {
     }
 }
 
+// Make the side bar take up the first column of the third row
 .sidebar {
     grid-column: 1 / span 1;
     color: $textlight;
@@ -83,6 +89,7 @@ header {
     }
 }
 
+// Make the content take up the remaining columns of the first row
 .content {
     background-color: $color5;
     grid-column: 2 / span 4;
@@ -108,6 +115,9 @@ header {
             margin-top: 0;
         }
     }
+
+    /* There are multiple text box variations in the site that just change
+        colors, so create multiple styles */
     &__color1 {
         color: $textdark;
         background-color: $color4;
@@ -144,6 +154,8 @@ header {
     }
 }
 
+/* Make the footer take up the whole last row, make it high enough so you can
+    see the infor above the cards */
 footer {
     height: 10rem;
     padding-top: 2rem;

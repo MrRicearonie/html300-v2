@@ -1,14 +1,5 @@
-/* Button animation inspiration:
-    https://www.w3schools.com/howto/howto_css_animate_buttons.asp, but it is
-    obviously completely different now. The main inspiration that I got out of
-    this is having a button that changes when clicked without using JS, but
-    it also inspired me to add a different colored background when clicked to
-    show some depth. Since I wanted an animation that scaled up then down, I
-    had to switch over to using keyframes.
-    
-    For the cards coming up I didn't look for inspiration. When I came up with
-    the concept for this project, I already knew I wanted the cards to pop up
-    from the bottom of the screen. */
+/* This is the scss for the container of the cards, the cards' animation, and
+    to get the cards setup process started */
 
     @import 'settings.variables';
     @import 'card.content';
@@ -128,3 +119,4 @@
     .button-bottom:active {
         animation: click-ani-bottom 400ms forwards;
     }
+    
