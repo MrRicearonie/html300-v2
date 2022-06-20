@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet" href="css/style.css" />
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <title>Assignment 06 - Bootstrap 4</title>
+  </head>
+  <body>
+
+    <!-- Start of Nav -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-nav text-muted" href="#"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./images.html" class="nav-link">Images</a>
+            </li>
+            <li class="nav-item">
+              <a href="./accordion.html" class="nav-link active">Accordion</a>
+            </li>
+            <li class="nav-item">
+              <a href="./grid.html" class="nav-link">Grid</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Nav -->
+
+    <div class="text-center my-5">
+        <h1 class="display-4 text-secondary">Major Operating Systems</h1>
+    </div>
+
+    <!-- Start of Accordion -->
+    <div class="accordion" id="accordionOS">
+        <div class="card">
+            <div class="card-header" id="headingWindows">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#windows" aria-expanded="true" aria-controls="collapseWindows">
+                        Windows
+                    </button>
+                </h2>
+            </div>
+            
+            <div id="windows" class="collapse show" aria-labelledby="headingWindows" data-parent="#accordionOS">
+                <div class="card-body">
+                    <!-- Center the image, and give is spacing above and below it -->
+                    <div class="text-center mb-5">
+                        <img src="./images/windows.jpeg" alt="A black Microsoft Surface Laptop 4" class="img-fluid">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas maiores deserunt dolore consequatur libero, laboriosam numquam. Ut maxime dolores dolorem, cumque non incidunt laboriosam totam, modi minus qui neque dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sed, eaque repudiandae ea iure ullam amet obcaecati unde laborum dolorem ratione ipsa! Cupiditate esse, atque quae assumenda incidunt accusamus nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo omnis, animi, fugiat nesciunt maxime consequatur dignissimos ducimus officiis est blanditiis laborum accusamus? Omnis consequuntur ab quisquam ut nihil perferendis. Quos. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae culpa, maiores pariatur omnis quam placeat velit veritatis quos distinctio autem obcaecati repellat sunt illo non? Numquam iure fugit ex blanditiis.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum earum facere, ullam excepturi impedit voluptates perspiciatis numquam, iure est sapiente illo distinctio ut ea eius delectus totam! Dolores, dignissimos rerum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime facilis eveniet deserunt dolore iure voluptates ea at dignissimos numquam, non ipsa, odio eos nam ex earum? Ratione aperiam nihil neque.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingMac">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#mac" aria-expanded="false" aria-controls="collapseMac">
+                        Mac
+                    </button>
+                </h2>
+            </div>
+            <div id="mac" class="collapse" aria-labelledby="headingMac" data-parent="#accordionOS">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="./images/macbook.jpeg" alt="14 and 16 inch 2021 MacBook Pros back to back" class="img-fluid">
+                    </div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatum consequuntur enim, ipsa aspernatur quam nulla laudantium nemo magni. Iusto cum facere officia ducimus accusamus beatae ipsum aliquid! Voluptatem, laborum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, totam? Possimus eaque inventore, earum harum magnam dolore saepe asperiores sint assumenda eligendi, autem tenetur quidem iusto quas cumque? Non, rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquid vero laborum fugit, qui harum id dolorem nisi odit ipsa cupiditate suscipit corrupti, repellendus nihil aliquam sit soluta enim dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque laborum, harum in mollitia perferendis excepturi minima repudiandae illum, praesentium possimus numquam facere maxime eligendi ratione, laudantium minus tempora voluptatem nisi!
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingLinux">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#linux" aria-expanded="false" aria-controls="collapseLinux">
+                        Linux
+                    </button>
+                </h2>
+            </div>
+            <div id="linux" class="collapse" aria-labelledby="headingLinux" data-parent="#accordionOS">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="./images/linux.png" alt="A System 76 Linux laptop" class="img-fluid">
+                    </div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nihil aliquid, animi blanditiis eligendi error neque tempora ad reprehenderit ducimus est aut voluptatum nemo illum necessitatibus! Ut amet et ipsam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quos quisquam beatae exercitationem iusto aut facilis tenetur assumenda! Sint, minima! Commodi omnis eligendi minus consequuntur facilis veritatis repudiandae tempore fuga.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingChrome">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#chrome" aria-expanded="false" aria-controls="collapseChrome">
+                        ChromeOS
+                    </button>
+                </h2>
+            </div>
+            <div id="chrome" class="collapse" aria-labelledby="headingChrome" data-parent="#accordionOS">
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <img src="./images/chomeos.png" alt="A Google Pixelbook" class="img-fluid">
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea provident cumque nihil magni impedit perspiciatis eaque numquam cum atque tenetur doloremque reiciendis quasi voluptatem, expedita at praesentium excepturi vel iure. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laudantium similique, dicta harum, fugit eaque consectetur pariatur assumenda aliquam maiores alias dolorem laborum est nihil ab neque corporis, officia possimus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore obcaecati repellendus incidunt aut, quisquam soluta autem necessitatibus assumenda ratione, earum mollitia dolore, repudiandae adipisci maxime vel ullam error. Sequi, repudiandae.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Accordion -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
