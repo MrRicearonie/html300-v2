@@ -10,6 +10,10 @@ Vue.use(VueRouter)
 // Set up the routes within our project
 const routes = [{
     path: '/',
+    redirect: '/home'
+},  
+{
+    path: '/home',
     name: 'Home',
     component: Home
 },
@@ -32,7 +36,9 @@ const routes = [{
 // Create the router with the the routes, and retain data from each page
 const router = new VueRouter ({
     mode: 'history',
-    routes
+    routes,
+    linkActiveClass: "active", // active class for non-exact links.
+    linkExactActiveClass: "active" // active class for *exact* links.
 })
 
 // Let other vue files use the router

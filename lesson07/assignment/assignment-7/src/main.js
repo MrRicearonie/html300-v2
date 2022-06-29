@@ -7,6 +7,7 @@ import { BootstrapVue } from 'bootstrap-vue'
 import './main.scss'
 
 Vue.use(BootstrapVue)
+Vue.component("NavBar", require('./components/NavBar.vue').default); // Navgar
 
 Vue.config.productionTip = false
 
