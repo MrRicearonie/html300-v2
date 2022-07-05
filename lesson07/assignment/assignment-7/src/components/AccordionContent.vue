@@ -1,8 +1,8 @@
 <template>
     <container>
         <div class="text-center my-5">
-                <h1 class="display-4 text-secondary">{{ pageTitle }}</h1>
-            </div>
+            <h1 class="display-4 text-secondary">{{ pageTitle }}</h1>
+        </div>
         <div class="accordion" role="tablist">
             <!-- Go through each of the cards and add them to the accordion -->
             <b-card v-for="card in cards" :key="card.id" no-body class="mb-1">
