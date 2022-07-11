@@ -8,9 +8,9 @@
                 <!-- Add the router links -->
                 <b-navbar-nav>
                     <router-link to="/home" class="nav-link">Home</router-link>
-                    <router-link to="/personal" class="nav-link">Personal</router-link>
-                    <router-link to="/shop" class="nav-link">Shop</router-link>
-                    <router-link to="/blog" class="nav-link">Blog</router-link>
+                    <router-link to="/personal" class="nav-link">Personal (Grid)</router-link>
+                    <router-link to="/shop" class="nav-link">Shop (Images)</router-link>
+                    <router-link to="/blog" class="nav-link">Blog (Accordion)</router-link>
                 </b-navbar-nav>
             </b-collapse>
         </b-container>
