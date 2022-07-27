@@ -1,0 +1,17 @@
+// Define variable defaults
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+#app {
+    margin: 0;
+}
+
+// Then import Bootstrap and BootstrapVue SCSS files (order is important)
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
